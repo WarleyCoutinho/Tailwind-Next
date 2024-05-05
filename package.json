@@ -16,6 +16,8 @@
   "description": "Projeto desenvolvido no curso Masterizando o Tailwind,por Warley Coutinho ",
   "license": "MIT",
   "dependencies": {
+    "@radix-ui/react-tabs": "^1.0.4",
+    "framer-motion": "^11.1.7",
     "lucide-react": "^0.364.0",
     "next": "14.1.3",
     "react": "^18",
