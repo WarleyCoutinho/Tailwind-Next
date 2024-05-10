@@ -17,7 +17,7 @@ export const Control = ({ multiple = false, ...props }: ControlProps)=> {
 
     const files = Array.from(event.target.files)
 
-    onFilesSelected(files)
+    onFilesSelected(files, multiple)
   }
 
   return (
@@ -26,6 +26,7 @@ export const Control = ({ multiple = false, ...props }: ControlProps)=> {
       className="sr-only"
       id={id}
       onChange={handleFilesSelected}
+      multiple={multiple}
       {...props}
     />
   )
