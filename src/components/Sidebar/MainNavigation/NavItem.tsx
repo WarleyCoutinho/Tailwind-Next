@@ -7,7 +7,7 @@ type Props={
 }
 
 
-export const  Navitem = ({title,icon:Icon}:Props) =>{
+export const  NavItem = ({title,icon:Icon}:Props) =>{
 
     return(
         <nav className="space-y-0.5">
