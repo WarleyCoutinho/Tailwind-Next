@@ -194,7 +194,7 @@ export const Logo=()=> {
         </clipPath>
       </defs>
     </svg>
-    <span>Untitled UI</span>
+    <span>Warley Coutinho</span>
     </strong>
   )
 }

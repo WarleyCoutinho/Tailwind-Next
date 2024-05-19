@@ -2,14 +2,15 @@
 import { Button } from '@components/button/Button'
 import { CheckCircle2, Trash2, UploadCloud } from 'lucide-react'
 import { tv, VariantProps } from 'tailwind-variants'
+import { FormatBytes } from '../../../../utils/Format-bytes'
 
 const fileItem = tv({
     slots: {
       container:
         'group flex items-start gap-4 rounded-lg border border-zinc-200 p-4',
-      icon: 'rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violet-600',
-      deleteButton: '',
-    },
+        icon: 'rounded-full border-4 border-violet-100 bg-violet-200 p-2 text-violet-600 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-500',
+        deleteButton: '',
+      },
   
     variants: {
       state: {
@@ -40,10 +41,6 @@ export const FileItem=({ name, size,state }: FileItemProps)=> {
 
     const { container, icon, deleteButton } = fileItem({ state })
 
-    const formatBytes= (size: number): import("react").ReactNode => {
-        throw new Error('Function not implemented.')
-    }
-
   return (
     <div className={container()}>
       <div className={icon()}>
@@ -70,7 +67,7 @@ export const FileItem=({ name, size,state }: FileItemProps)=> {
         <div className="flex flex-1 flex-col items-start gap-1">
           <div className="flex flex-col">
             <span className="text-sm font-medium text-zinc-700">{name}</span>
-            <span className="text-sm text-zinc-500">{formatBytes(size)}</span>
+            <span className="text-sm text-zinc-500">{FormatBytes(size)}</span>
           </div>
 
           <div className="flex w-full items-center gap-3">
